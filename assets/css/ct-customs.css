@@ -1,0 +1,271 @@
+/**
+ * @Custiom Style for Layout
+ */
+
+.ct__w1200 {
+	min-width: 1200px;
+}
+
+/**
+ * @Custiom Style for Table
+ * ㄴ #subPageTabs
+ */
+
+#subPageTabs {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#subPageTabs .nav {
+	flex-wrap: nowrap;
+	width: calc(100% - 100px);
+	overflow-x: auto;
+}
+
+#subPageTabs .nav .nav-item {
+	margin-right: 1rem;
+}
+
+#subPageTabs .nav .nav-item .nav-link {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	padding-right: 0.5rem;
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+#subPageTabs .nav .nav-item .nav-link.active {
+	background-color: var(--primary);
+}
+
+#subPageTabs .nav .nav-item .nav-link.active button {
+	color: #fff;
+}
+
+.nav-tabs-sm {
+	margin-bottom: -1px;
+}
+
+.nav-tabs-sm .nav-link {
+	padding: 0.7rem 2rem;
+}
+
+/**
+ * @Custiom Style for Table
+ * ㄴ .ct__table-leftside
+ * ㄴ .ct__table-leftside.table-sm
+ */
+
+table.ct__scroll {
+	min-width: 1200px;
+}
+
+table.table-sm {
+	border-collapse: separate;
+	border: solid #e3e6f0 1px;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+table.table-sm tr th,
+table.table-sm tr td {
+	padding: 0.7rem;
+	border-left: solid #e3e6f0 1px;
+	border-top: solid #e3e6f0 1px;
+	vertical-align: middle;
+}
+
+table.table-sm tr th {
+	background-color: rgba(0, 0, 0, 0.03);
+	border-top: none;
+	border-bottom: none;
+}
+
+table.table-sm tr th:first-child,
+table.table-sm tr td:first-child {
+	border-left: none;
+}
+
+table.ct__table-leftside:not(.table-sm) {
+	border-top: 2px solid #e3e6f0;
+	border-bottom: 2px solid #e3e6f0;
+}
+
+table.ct__table-leftside:not(.table-sm) > tbody > tr > th {
+	background-color: var(--light);
+	border-right: 1px solid #e3e6f0;
+	vertical-align: middle;
+}
+
+table.ct__table-leftside.table-sm {
+	border-collapse: separate;
+	border: solid #e3e6f0 1px;
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+table.ct__table-leftside.table-sm th {
+	background-color: rgba(0, 0, 0, 0.03);
+	border-top: none;
+}
+
+table.ct__table-leftside.table-sm td {
+	padding-left: 0.65rem;
+}
+
+table.ct__table-leftside.table-sm th,
+table.ct__table-leftside.table-sm td {
+	border-bottom: 1px solid #e3e6f0;
+	border-top: none;
+	border-left: none;
+	vertical-align: middle;
+}
+
+table.ct__table-leftside.table-sm tr:last-child td,
+table.ct__table-leftside.table-sm tr:last-child th {
+	border-bottom: none;
+	/* border-bottom: none;
+  border-top: none;
+  border-left: none; */
+}
+
+table.ct__thead2 thead th {
+	vertical-align: middle;
+	border-right: 1px solid #e3e6f0;
+}
+
+table.ct__thead2 thead th:last-child {
+	border-right: none;
+}
+
+table tr.ct__disabled {
+	color: #d1d3e2 !important;
+}
+
+table tbody td.sub-text {
+	text-indent: 1rem;
+}
+
+table tbody td.sub-text::before {
+	content: 'ㄴ';
+	position: absolute;
+	left: 1rem;
+	opacity: 0.5;
+}
+
+table span.ct__required {
+	display: inline-block;
+	position: relative;
+}
+
+table span.ct__required::before {
+	content: '*';
+	color: var(--orange);
+	position: absolute;
+	top: 0;
+	right: -11px;
+}
+
+.ct__upload-image {
+	max-width: 100px;
+}
+
+.ct__upload-image img {
+	width: 100%;
+	height: auto;
+}
+
+/**
+ * @Custiom Style for Form Elements
+ * ㄴ .ct__table-leftside
+ * ㄴ .ct__table-leftside.table-sm
+ *
+*/
+
+.ct__switch--handle {
+  color: var(--gray);
+}
+
+.ct__switch--handle.active {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.ct__switch--handle[data-status-system="true"].active {
+  color: var(--purple);
+}
+
+.ct__switch--admin .custom-control-input:checked + label::before {
+  background-color: var(--purple);
+}
+
+.ct__switch--admin .custom-control-label::before {
+	background-color: var(--primary);
+}
+
+.ct__switch--admin .custom-control-label::after {
+  background-color: #fff;
+}
+
+.custom-switch.switch-lg {
+  padding-left: 2.6rem;
+  margin-right: 0.2rem;
+}
+
+.custom-switch.switch-lg .custom-control-label::before {
+  left: -2.5rem;
+  top: 1px;
+  width: 2.4rem;
+  height: 1.4rem;
+  pointer-events: all;
+  border-radius: 0.7rem;
+  border-color: transparent;
+}
+
+.custom-switch.switch-lg .custom-control-label::after {
+  top: 3px;
+  left: calc(-2.5rem + 2px);
+  width: calc(1.4rem - 4px);
+  height: calc(1.4rem - 4px);
+  border-radius: 0.7rem;
+}
+
+.custom-switch.switch-lg .custom-control-input:checked ~ .custom-control-label::after {
+	transform: translateX(1rem);
+}
+
+.ct__divider {
+	width: 0;
+	border-right: 1px solid #e3e6f0;
+	height: calc(4.375rem - 2rem);
+	margin: auto 1rem;
+}
+
+.ct__stepper input[type="number"] {
+  width: auto;
+  flex: 0 1 60px;
+  text-align: center;
+}
+
+.ct__stepper input::-webkit-outer-spin-button,
+.ct__stepper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.ct__stepper input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/**
+ * @Custiom Style for Modals
+ * ㄴ .modal-dialog-centered.ct__w800
+ *
+ */
+
+.modal-dialog-centered.modal-xl {
+	max-width: none;
+	margin-left: 3rem;
+	margin-right: 3rem;
+	padding-left: 12px;
+}

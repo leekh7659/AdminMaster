@@ -1,0 +1,44 @@
+.ct__login-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 540px;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.ct__login-tab .nav {
+  background-color: #fff;
+}
+
+.ct__login-tab .nav-link {
+  border-radius: 0;
+  background-color: var(--light);
+  color: #111;
+}
+
+.ct__login-tab .nav-link.active {
+  background-color: var(--white);
+  /* border-bottom: 3px solid var(--primary); */
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.ct__login-tab .nav-link:hover {
+  color: var(--primary);
+}
+
+.ct__login-logo {
+  display: flex;
+  justify-content: center;
+  font-size: 2.4rem;
+  color: white;
+}
+
+.ct__login-panel {
+  width: 100%;
+  border-radius: 6px;
+  background-color: #fff;
+  overflow: hidden;
+}
