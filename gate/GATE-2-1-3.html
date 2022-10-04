@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>통합 시스템 어드민(NSIS)</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../assets/vendor/fontawesome/css/all.css" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template-->
+    <link href="../assets/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../assets/css/common.css" rel="stylesheet">
+    <link href="../assets/css/ct-customs.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <div id="skip" class="sr-only sr-only-focusable">
+        <a href="#topGnbMenu">상단 메뉴 바로가기</a>
+        <a href="#sidebarNavMenu">사이드바 메뉴 바로가기</a>
+        <a href="#content">콘텐츠 바로가기</a>
+    </div>
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="sidebarNavMenu">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <!-- sidebar-brand-text -->
+                <div class="mx-3">LOGO</div>
+            </a>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>대시보드</span>
+                </a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuSiteCollapse"
+                    aria-expanded="true" aria-controls="navMenuSite">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>사이트설정관리</span>
+                </a>
+                <div id="navMenuSiteCollapse" class="collapse" aria-labelledby="navMenuSiteHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M1.html">메뉴관리</a>html">메뉴관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuProgramCollapse"
+                    aria-expanded="true" aria-controls="navMenuProgram">
+                    <i class="fas fa-fw fa-window-restore"></i>
+                    <span>프로그램관리</span>
+                </a>
+                <div id="navMenuProgramCollapse" class="collapse show" aria-labelledby="navMenuProgramHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item active" href="./NSIS-M2-1-1.html">게시판관리</a>
+                        <a class="collapse-item" href="./NSIS-M2-2-1.html">프로그램관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuAuthCollapse"
+                    aria-expanded="true" aria-controls="navMenuAuth">
+                    <i class="fas fa-fw fa-lock"></i>
+                    <span>권한관리</span>
+                </a>
+                <div id="navMenuAuthCollapse" class="collapse" aria-labelledby="navMenuAuthHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M3-1-1.html">메뉴권한관리</a>
+                        <a class="collapse-item" href="./NSIS-M3-2-1.html">시스템권한설정관리</a>
+                        <a class="collapse-item" href="./NSIS-M3-3-1.html">사용자그룹관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuUsersCollapse"
+                    aria-expanded="true" aria-controls="navMenuUsers">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>회원관리</span>
+                </a>
+                <div id="navMenuUsersCollapse" class="collapse" aria-labelledby="navMenuUsersHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M4-1-1.html">회원관리</a>
+                        <a class="collapse-item" href="./NSIS-M4-2-1.html">탈퇴회원관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuCodeCollapse"
+                    aria-expanded="true" aria-controls="navMenuCode">
+                    <i class="fas fa-fw fa-cube"></i>
+                    <span>코드관리</span>
+                </a>
+                <div id="navMenuCodeCollapse" class="collapse" aria-labelledby="navMenuCodeHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M5-1-1.html">공통코드관리</a>
+                        <a class="collapse-item" href="./NSIS-M5-2-1.html">용어사전관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuSystemCollapse"
+                    aria-expanded="true" aria-controls="navMenuSystem">
+                    <i class="fas fa-fw fa-cogs"></i>
+                    <span>시스템관리</span>
+                </a>
+                <div id="navMenuSystemCollapse" class="collapse" aria-labelledby="navMenuSystemHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M6-1-1.html">관리자접속IP관리</a>
+                        <a class="collapse-item" href="./NSIS-M6-2-1.html">계정정책관리</a>
+                        <a class="collapse-item" href="./NSIS-M6-3-1.html">개인정보취급이력관리</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuConfigCollapse"
+                    aria-expanded="true" aria-controls="navMenuConfig">
+                    <i class="fas fa-fw fa-sliders-h"></i>
+                    <span>기본설정관리</span>
+                </a>
+                <div id="navMenuConfigCollapse" class="collapse" aria-labelledby="navMenuConfigHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M7-1-1.html">기본설정관리</a>
+                        <a class="collapse-item" href="./NSIS-M7-2-1.html">SEO설정</a>
+                        <a class="collapse-item" href="./NSIS-M7-3-1.html">관련사이트설정</a>
+                        <a class="collapse-item" href="./NSIS-M7-4-1.html">약관설정</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#navMenuHistoryCollapse"
+                    aria-expanded="true" aria-controls="navMenuHistory">
+                    <i class="fas fa-fw fa-history"></i>
+                    <span>이력관리</span>
+                </a>
+                <div id="navMenuHistoryCollapse" class="collapse" aria-labelledby="navMenuHistoryHeader"
+                    data-parent="#sidebarNavMenu">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="./NSIS-M8-1-1.html">개인정보접속이력</a>
+                        <a class="collapse-item" href="./NSIS-M8-2-1.html">로그인이력관리</a>
+                        <a class="collapse-item" href="./NSIS-M8-3-1.html">접근통제이력</a>
+                        <a class="collapse-item" href="./NSIS-M8-4-1.html">시스템권한부여이력</a>
+                        <a class="collapse-item" href="./NSIS-M8-5-1.html">메뉴권한이력</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./NSIS-M9-1-1.html">
+                    <i class="fas fa-fw fa-user-cog"></i>
+                    <span>관리자정보수정</span>
+                </a>
+            </li>
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline mt-4">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column ct__w1200">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" id="topGnbMenu">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3" aria-hidden="true">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <!-- Top Category Dropdown -->
+                    <div class="dropdown">
+                        <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown"
+                            aria-expanded="false">
+                            통합 시스템 어드민(NSIS)
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">1통합 시스템 어드민(NSIS)</a></li>
+                            <li><a class="dropdown-item" href="#">2통합 시스템 어드민(NSIS)</a></li>
+                            <li><a class="dropdown-item" href="#">3통합 시스템 어드민(NSIS)</a></li>
+                        </ul>
+                    </div>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto align-items-center">
+                        <li class="nav-item d-flex justify-content-center align-items-center">
+                            <span class="ct__switch--handle mr-2" data-target="#workStatus" data-status-system="false"
+                                role="button">업무모드</span>
+                            <div class="custom-control custom-switch ct__switch--admin switch-lg mr-2">
+                                <input type="checkbox" class="custom-control-input" id="workStatus">
+                                <label class="custom-control-label" for="workStatus"></label>
+                            </div>
+                            <span class="ct__switch--handle" data-target="#workStatus" data-status-system="true"
+                                role="button">시스템모드</span>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="img-profile rounded-circle" src="../assets/images/undraw_profile.svg"
+                                    alt="프로필 사진">
+                                <span class="mx-2 text-gray-600">홍길동</span>
+                                <span class="m-0 text-secondary small">(2022-01-01 13:00:33)</span>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-left shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user-cog fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    관리자정보수정
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    로그아웃
+                                </a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="" role="button">
+                                <i class="fas fa-home fa-fw"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="" role="button">
+                                <i class="fas fa-sign-out-alt fa-fw"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid ct__w1200">
+                    <!-- Page Heading -->
+                    <div class="d-flex mb-4 align-items-center justify-content-between">
+                        <h1 class="h3 mb-0 text-gray-800">신청현황관리</h1>
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item"><a href="#">모델관리</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">신청현황관리</li>
+                        </ol>
+                    </div>
+                    <!-- Sub Page NavTab -->
+                    <div id="subPageTabs" class="d-flex justify-content-between align-items-center mb-4 pb-2">
+                        <ul class="nav nav-pills" id="subPageTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" id="subPageTab1" data-toggle="pill" href="#subPageContent1" role="tab"
+                                aria-controls="subPageTab1" aria-selected="true">품명관리
+                                <button class="nav-link-close btn btn-sm btn-circle ml-2" aria-label="탭 닫기"><i class="fas fa-times"></i></button>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" id="subPageTab" data-toggle="pill" href="#subPageContent2" role="tab"
+                                aria-controls="subPageContent2" aria-selected="false">신청현황
+                                <button class="nav-link-close btn btn-sm btn-circle ml-2" aria-label="탭 닫기"><i class="fas fa-times"></i></button>
+                                </a>
+                            </li>
+                        </ul>
+                        <button type="button" class="nav-link-close-all btn btn-outline-secondary btn-sm px-2"><i class="fas fa-times mr-2"></i>전체 닫기</button>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <div class="table-responsive mb-4">
+                                        <table class="table table-striped table-light text-center mb-0 table-hover"
+                                            id="boardTable" cellspacing="0">
+                                            <caption class="sr-only sr-only-focusable">신고종류</caption>
+                                            <thead class="font-weight-bold text-primary">
+                                                <tr>
+                                                    <th scope="col">신고종류</th>
+                                                    <th scope="col">접수중</th>
+                                                    <th scope="col">검토중</th>
+                                                    <th scope="col">등록완료</th>
+                                                    <th scope="col">반려</th>
+                                                    <th scope="col">합계</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td scope="row"><a href="GATE-2-1-2.html">품명</a></td>
+                                                    <td>0</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>7,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row"><a href="GATE-2-1-3.html">제작사</a></td>
+                                                    <td>0</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>7,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row"><a href="GATE-2-1-4.html">모델(개봉)</a></td>
+                                                    <td>0</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>7,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row"><a href="GATE-2-1-5.html">모델(밀봉)</a></td>
+                                                    <td>0</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>7,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row"><a href="GATE-2-1-6.html">모델(내장장치)</a></td>
+                                                    <td>0</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>7,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row"><a href="GATE-2-1-7.html">모델(발생장치)</a></td>
+                                                    <td>0</td>
+                                                    <td>1</td>
+                                                    <td>2</td>
+                                                    <td>3</td>
+                                                    <td>7,500</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <form class="">
+                                        <div class="form-row d-flex justify-content-between">
+                                            <div class="col-11">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <span class="col-form-label mr-3 text-secondary">신청일자</span>
+                                                    <select id="" class="col-1 form-control mr-1" aria-label="신청일자">
+                                                        <option selected>기간</option>
+                                                        <option>년/월</option>
+                                                        <option>분기</option>
+                                                        <option>반기</option>
+                                                    </select>
+                                                    <div class="form-inline pl-2">
+                                                        <input type="date" class="form-control" value="" placeholder=""
+                                                            aria-label="신청일자 시작일 선택">
+                                                        <span class="text-center mx-2"> ~ </span>
+                                                        <input type="date" class="form-control" value="" placeholder=""
+                                                            aria-label="신청일자 종료일 선택">
+                                                    </div>
+                                                    <span class="col-form-label mx-3 text-secondary">모델명</span>
+                                                    <input type="text" class="form-control" placeholder=""
+                                                        aria-label="모델명 입력">
+                                                    <span class="col-form-label mx-3 text-secondary">품명</span>
+                                                    <input type="text" class="form-control" placeholder=""
+                                                        aria-label="품명 입력">
+                                                </div>
+                                                <div class="d-flex align-items-center">
+                                                    <span class="col-form-label mr-3 text-secondary">제작사</span>
+                                                    <input type="text" class="form-control" placeholder=""
+                                                        aria-label="제작사 입력">
+                                                    <span class="col-form-label mx-3 text-secondary">신청기관</span>
+                                                    <input type="text" class="form-control" placeholder=""
+                                                        aria-label="신청기관 입력">
+                                                </div>
+                                            </div>
+                                            <div class="col-1">
+                                                <button type="submit"
+                                                    class="btn btn-primary btn-block btn-icon-split h-100 align-items-center">
+                                                    <span class="text">조회</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <div class="table-responsive mb-4">
+                                        <table class="table table-striped table-light text-center mb-0 table-hover"
+                                            id="boardTable" cellspacing="0">
+                                            <caption class="sr-only sr-only-focusable">제작사출력항목</caption>
+                                            <thead class="font-weight-bold text-primary">
+                                                <tr>
+                                                    <th scope="col">번호</th>
+                                                    <th scope="col">코드</th>
+                                                    <th scope="col">제작사</th>
+                                                    <th scope="col">원산지</th>
+                                                    <th scope="col">승인여부</th>
+                                                    <th scope="col">승인일자</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td scope="row">3</td>
+                                                    <td>R19-03-2017050121-1</td>
+                                                    <td>Am-243</td>
+                                                    <td>원산지</td>
+                                                    <td>검토중</td>
+                                                    <td>2022-01-01</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">2</td>
+                                                    <td>R19-03-2017050121-1</td>
+                                                    <td>Am-243</td>
+                                                    <td>원산지</td>
+                                                    <td>검토중</td>
+                                                    <td>2022-01-01</td>
+                                                </tr>
+                                                <tr>
+                                                    <td scope="row">1</td>
+                                                    <td>R19-03-2017050121-1</td>
+                                                    <td>Am-243</td>
+                                                    <td>원산지</td>
+                                                    <td>검토중</td>
+                                                    <td>2022-01-01</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <nav aria-label="page navigation">
+                                            <ul class="pagination">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
+                                                            class="fas fa-chevron-left"></i></a>
+                                                </li>
+                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#"><i
+                                                            class="fas fa-chevron-right"></i></a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- End of Main Content -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Modal -->
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../assets/js/sb-admin-2.js"></script>
+
+    <!-- Page level plugins -->
+
+    <!-- Page level custom scripts -->
+
+</body>
+
+</html>
